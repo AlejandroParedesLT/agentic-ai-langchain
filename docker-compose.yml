@@ -1,0 +1,112 @@
+version: '3.8'
+
+services:
+  arxiv:
+    build:
+      context: .
+      dockerfile: src/servers/arxiv/Dockerfile
+    container_name: arxiv
+    ports:
+      - "8000:8000"
+    env_file:
+      - src/servers/arxiv/.env
+
+  calculator:
+    build:
+      context: .
+      dockerfile: src/servers/calculator/Dockerfile
+    container_name: calculator
+    ports:
+      - "8001:8000"
+    env_file:
+      - src/servers/calculator/.env
+
+  coding:
+    build:
+      context: .
+      dockerfile: src/servers/coding/Dockerfile
+    container_name: coding
+    ports:
+      - "8002:8000"
+    env_file:
+      - src/servers/coding/.env
+
+  dataanalysis:
+    build:
+      context: .
+      dockerfile: src/servers/dataAnalysis/Dockerfile
+    container_name: dataAnalysis
+    ports:
+      - "8003:8000"
+    env_file:
+      - src/servers/dataAnalysis/.env
+
+  documentgrader:
+    build:
+      context: .
+      dockerfile: src/servers/documentGrader/Dockerfile
+    container_name: documentGrader
+    ports:
+      - "8004:8000"
+    env_file:
+      - src/servers/documentGrader/.env
+
+  routers:
+    build:
+      context: .
+      dockerfile: src/servers/routers/Dockerfile
+    container_name: routers
+    ports:
+      - "8005:8000"
+    env_file:
+      - src/servers/routers/.env
+
+  vectordb:
+    build:
+      context: .
+      dockerfile: src/servers/vectordb/Dockerfile
+    container_name: vectordb
+    ports:
+      - "8006:8000"
+    env_file:
+      - src/servers/vectordb/.env
+
+  websearch:
+    build:
+      context: .
+      dockerfile: src/servers/websearch/Dockerfile
+    container_name: websearch
+    ports:
+      - "8007:8000"
+    env_file:
+      - src/servers/websearch/.env
+
+  hallucinationgrader:
+    build:
+      context: .
+      dockerfile: src/servers/hallucinationGrader/Dockerfile
+    container_name: hallucinationGrader
+    ports:
+      - "8008:8000"
+    env_file:
+      - src/servers/hallucinationGrader/.env
+  
+  responsegenerator:
+    build:
+      context: .
+      dockerfile: src/servers/responseGenerator/Dockerfile
+    container_name: responseGenerator
+    ports:
+      - "8009:8000"
+    env_file:
+      - src/servers/responseGenerator/.env
+
+  graphendpoint:
+    build:
+      context: .
+      dockerfile: src/graph/Dockerfile
+    container_name: graphendpoint
+    ports:
+      - "8010:8000"
+    env_file:
+      - src/graph/.env

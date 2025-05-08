@@ -1,0 +1,28 @@
+streamlit
+requests
+jinja2==3.1.4
+matplotlib
+boto3
+sagemaker
+dotenv
+
+# aws-cdk-lib==2.146.0
+# constructs>=10.0.0,<11.0.0
+
+# streamlit
+# requests
+# jinja2
+# matplotlib
+# boto3
+# sagemaker==2.223.0
+# setuptools==70.2.0
+# #sagemaker
+
+# crewai 
+# huggingface_hub 
+# psutil 
+# pynvml
+# transformers==4.44.2
+# torch>=1.1.13
+# torchvision
+# torchaudio
