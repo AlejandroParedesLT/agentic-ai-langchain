@@ -1,0 +1,7 @@
+{
+  "dependencies": ["./pipeline", "./utils", "./models"],
+  "graphs": {
+    "agent": "./pipeline/flow_graph_test.py:dev_"
+  },
+  "env": ".env"
+}

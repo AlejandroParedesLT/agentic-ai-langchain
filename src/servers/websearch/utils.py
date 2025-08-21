@@ -1,8 +1,8 @@
 
 from langchain_community.tools.tavily_search import TavilySearchResults
-from src.servers.websearch.model import WebSearchInput, WebSearchOutput
-# import httpx
 
+# from src.servers.websearch.model import WebSearchInput, WebSearchOutput
+from model import WebSearchInput, WebSearchOutput
 
 def simple_web_search(input:WebSearchInput, webSearchTool:TavilySearchResults) -> str:
     """
@@ -14,3 +14,4 @@ def simple_web_search(input:WebSearchInput, webSearchTool:TavilySearchResults) -
         return WebSearchOutput(output=web_results)
     except Exception as e:
         return WebSearchOutput(output=str(e))
+

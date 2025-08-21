@@ -3,110 +3,124 @@ version: '3.8'
 services:
   arxiv:
     build:
-      context: .
-      dockerfile: src/servers/arxiv/Dockerfile
+      context: src/servers/arxiv
+      dockerfile: Dockerfile
     container_name: arxiv
     ports:
-      - "8000:8000"
+      - "8011:8000"
     env_file:
       - src/servers/arxiv/.env
+    volumes:
+      - ./src/servers/arxiv:/app
 
   calculator:
     build:
-      context: .
-      dockerfile: src/servers/calculator/Dockerfile
+      context: src/servers/calculator
+      dockerfile: Dockerfile
     container_name: calculator
     ports:
       - "8001:8000"
     env_file:
       - src/servers/calculator/.env
+    volumes:
+      - ./src/servers/calculator:/app
 
   coding:
     build:
-      context: .
-      dockerfile: src/servers/coding/Dockerfile
+      context: src/servers/coding
+      dockerfile: Dockerfile
     container_name: coding
     ports:
       - "8002:8000"
     env_file:
       - src/servers/coding/.env
-
+    volumes:
+      - ./src/servers/coding:/app
   dataanalysis:
     build:
-      context: .
-      dockerfile: src/servers/dataAnalysis/Dockerfile
+      context: src/servers/dataAnalysis
+      dockerfile: Dockerfile
     container_name: dataAnalysis
     ports:
       - "8003:8000"
     env_file:
       - src/servers/dataAnalysis/.env
-
+    volumes:
+      - ./src/servers/dataAnalysis:/app
   documentgrader:
     build:
-      context: .
-      dockerfile: src/servers/documentGrader/Dockerfile
+      context: src/servers/documentGrader
+      dockerfile: Dockerfile
     container_name: documentGrader
     ports:
       - "8004:8000"
     env_file:
       - src/servers/documentGrader/.env
-
-  routers:
+    volumes:
+      - ./src/servers/documentGrader:/app
+  router:
     build:
-      context: .
-      dockerfile: src/servers/routers/Dockerfile
-    container_name: routers
+      context: src/servers/router
+      dockerfile: Dockerfile
+    container_name: router
     ports:
       - "8005:8000"
     env_file:
-      - src/servers/routers/.env
-
+      - src/servers/router/.env
+    volumes:
+      - ./src/servers/router:/app
   vectordb:
     build:
-      context: .
-      dockerfile: src/servers/vectordb/Dockerfile
+      context: src/servers/vectordb
+      dockerfile: Dockerfile
     container_name: vectordb
     ports:
       - "8006:8000"
     env_file:
       - src/servers/vectordb/.env
-
+    volumes:
+      - ./src/servers/vectordb:/app
   websearch:
     build:
-      context: .
-      dockerfile: src/servers/websearch/Dockerfile
+      context: src/servers/websearch
+      dockerfile: Dockerfile
     container_name: websearch
     ports:
       - "8007:8000"
     env_file:
       - src/servers/websearch/.env
-
+    volumes:
+      - ./src/servers/websearch:/app
   hallucinationgrader:
     build:
-      context: .
-      dockerfile: src/servers/hallucinationGrader/Dockerfile
+      context: src/servers/hallucinationGrader
+      dockerfile: Dockerfile
     container_name: hallucinationGrader
     ports:
       - "8008:8000"
     env_file:
       - src/servers/hallucinationGrader/.env
-  
+    volumes:
+      - ./src/servers/hallucinationGrader:/app
   responsegenerator:
     build:
-      context: .
-      dockerfile: src/servers/responseGenerator/Dockerfile
+      context: src/servers/responseGenerator
+      dockerfile: Dockerfile
     container_name: responseGenerator
     ports:
       - "8009:8000"
     env_file:
       - src/servers/responseGenerator/.env
-
+    volumes:
+      - ./src/servers/responseGenerator:/app
   graphendpoint:
     build:
-      context: .
-      dockerfile: src/graph/Dockerfile
+      context: src/graph
+      dockerfile: Dockerfile
     container_name: graphendpoint
     ports:
       - "8010:8000"
     env_file:
       - src/graph/.env
+    volumes:
+      - ./src/graph:/app

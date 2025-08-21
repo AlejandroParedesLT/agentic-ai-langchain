@@ -1,5 +1,7 @@
-from src.servers.coding.utils import execute_code
-from src.servers.coding.model import CodingInput, CodingOutput
+# from src.servers.coding.utils import execute_code
+# from src.servers.coding.model import CodingInput, CodingOutput
+from utils import execute_code
+from model import CodingInput, CodingOutput
 from fastapi import FastAPI
 
 app = FastAPI()

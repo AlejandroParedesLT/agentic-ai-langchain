@@ -1,10 +1,15 @@
-from src.agents.retrievalGrader import doc_grader_instructions, doc_grader_prompt
 from langchain_core.messages import HumanMessage, SystemMessage
-from src.servers.documentGrader.model import GraderInput, GraderOutput
-from src.models.ollama import llmservice
+# from src.agents.retrievalGrader import doc_grader_instructions, doc_grader_prompt
+# from src.servers.documentGrader.model import GraderInput, GraderOutput
+# from src.models.ollama import llmservice
+
+from model import GraderInput, GraderOutput
+from langchain_ollama import ChatOllama
+from agents import doc_grader_instructions, doc_grader_prompt
+
 import json
 
-def grade_documents(input:GraderInput, llm:llmservice):
+def grade_documents(input:GraderInput, llm:ChatOllama):
     """
     Determines whether the retrieved documents are relevant to the question
     If any document is not relevant, we will set a flag to run web search

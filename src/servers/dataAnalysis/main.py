@@ -1,5 +1,7 @@
-from src.servers.dataAnalysis.model import DataAnalysisInput, DataAnalysisOutput
-from src.servers.dataAnalysis.utils import statistics
+# from src.servers.dataAnalysis.model import DataAnalysisInput, DataAnalysisOutput
+# from src.servers.dataAnalysis.utils import statistics
+from model import DataAnalysisInput, DataAnalysisOutput
+from utils import statistics
 from fastapi import FastAPI, UploadFile, File
 
 app = FastAPI()

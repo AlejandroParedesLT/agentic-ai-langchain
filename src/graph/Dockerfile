@@ -2,14 +2,10 @@ FROM python:3.12-slim
 
 WORKDIR /app
 
-# Copy everything from root into the container
-COPY . /app
+COPY requirements.txt /app/requirements.txt
 
-# Optional: ensure PYTHONPATH includes /app for clean absolute imports
-# ENV PYTHONPATH=/app
-
-RUN pip install fastapi uvicorn langgraph langchain-core typing-extensions httpx python-dotenv langchain-ollama ipython
+RUN pip install --no-cache-dir -r /app/requirements.txt
 
 EXPOSE 8000
 
-CMD ["uvicorn", "src.graph.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]

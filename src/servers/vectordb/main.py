@@ -1,5 +1,9 @@
-from src.servers.vectordb.utils import vectordb_search
-from src.servers.vectordb.model import VectorSearch,VectorSearchInput,VectorSearchOutput
+# from src.servers.vectordb.utils import vectordb_search
+# from src.servers.vectordb.model import VectorSearch,VectorSearchInput,VectorSearchOutput
+
+from utils import vectordb_search
+from model import VectorSearch,VectorSearchInput,VectorSearchOutput
+
 from fastapi import FastAPI, Depends
 
 app = FastAPI()

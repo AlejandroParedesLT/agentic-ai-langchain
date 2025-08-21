@@ -10,7 +10,7 @@ class VectorSearchInput(BaseModel):
     input: str  # summary from loan_parser
 
 class VectorSearchOutput(BaseModel):
-    output: List[Document]
+    output: str #List[Document]
 
 
 class VectorSearch:

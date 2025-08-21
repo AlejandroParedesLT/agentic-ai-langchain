@@ -1,0 +1,9 @@
+fastapi 
+uvicorn
+langgraph 
+langchain-core 
+typing-extensions 
+httpx 
+python-dotenv 
+langchain-ollama 
+ipython

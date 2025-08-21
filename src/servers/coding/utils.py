@@ -1,6 +1,7 @@
 import contextlib
 import io
-from src.servers.coding.model import CodingInput, CodingOutput
+# from src.servers.coding.model import CodingInput, CodingOutput
+from model import CodingInput, CodingOutput
 
 def execute_code(input: CodingInput):
     stdout = io.StringIO()

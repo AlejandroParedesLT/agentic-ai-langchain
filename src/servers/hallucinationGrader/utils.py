@@ -1,19 +1,30 @@
 from langchain_core.messages import HumanMessage, SystemMessage
-from src.servers.hallucinationGrader.model import hallucinationGraderInput, hallucinationGraderOutput
 import json
-from src.models.ollama import llmservice
 
-from src.agents.hallucination_grader import (
+# from src.servers.hallucinationGrader.model import hallucinationGraderInput, hallucinationGraderOutput
+# from src.models.ollama import llmservice
+# from src.agents.hallucination_grader import (
+#     hallucination_grader_instructions,
+#     hallucination_grader_prompt,
+#     answer_grader_instructions,
+#     answer_grader_prompt)
+
+
+from model import hallucinationGraderInput, hallucinationGraderOutput
+from langchain_ollama import ChatOllama
+from agents import (
     hallucination_grader_instructions,
     hallucination_grader_prompt,
     answer_grader_instructions,
-    answer_grader_prompt)
+    answer_grader_prompt
+)
+
 
 # Post-processing
 def format_docs(docs):
     return "\n\n".join(doc.page_content for doc in docs if doc.page_content)
 
-def gradeAnswer(input: hallucinationGraderInput, llm_json_mode:llmservice):
+def gradeAnswer(input: hallucinationGraderInput, llm_json_mode:ChatOllama):
     """
     Determines whether the generation is grounded in the document and answers question
 

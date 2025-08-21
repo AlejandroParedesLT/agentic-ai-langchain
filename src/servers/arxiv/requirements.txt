@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+pydantic
+arxiv
+langchain-community
+fastapi-mcp

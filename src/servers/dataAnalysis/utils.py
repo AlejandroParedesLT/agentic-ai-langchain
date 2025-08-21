@@ -1,5 +1,6 @@
 import pandas as pd
-from src.servers.dataAnalysis.model import DataAnalysisOutput
+# from src.servers.dataAnalysis.model import DataAnalysisOutput
+from model import DataAnalysisOutput
 
 def statistics(csv):
     """
