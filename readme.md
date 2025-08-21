@@ -1,8 +1,8 @@
 # Agents and MCP: Agentic LLM Pipeline with MCP + LangGraph + SageMaker
 
-[Graph](output.png)
+![Graph](output.png)
 
-[WebApp](streamlit-landing-page.png)
+![WebApp](streamlit-landing-page.png)
 
 
 
