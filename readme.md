@@ -33,17 +33,40 @@ Each role is:
 
 ## 🧱 Project Structure
 
+
+### MCP Servers (src/servers)
+
+The following MCP servers are available in `src/servers/`:
+
+- `arxiv`  
+- `calculator`  
+- `coding`  
+- `dataAnalysis`  
+- `documentGrader`  
+- `hallucinationGrader`  
+- `responseGenerator`  
+- `router`  
+- `vectordb`  
+- `websearch`
+
 ```
 Agents-FSI-MCP/
 ├── agents/
-│   ├── loan_officer.py
-│   ├── credit_analyst.py
-│   └── risk_manager.py
+│   ├── hallucination_grader.py
+│   ├── router.py
+│   └── generator.py
 │
 ├── servers/
-│   ├── loan_parser/
-│   ├── credit_analyzer/
-│   └── risk_assessor/
+│   ├── arxiv/
+│   ├── calculator/
+│   ├── coding/
+│   ├── dataAnalysis/
+│   ├── documentGrader/
+│   ├── hallucinationGrader/
+│   ├── responseGenerator/
+│   ├── router/
+│   ├── vectordb/
+│   └── websearch/
 │
 ├── common/
 │   └── sagemaker_client.py
